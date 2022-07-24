@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.google.com/s2/u/0/favicons?domain=css-tricks.com" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <!-- Local Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dice Game - My first JS game</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="gameBoard">
+            <div class="playerOne" id="playerOne">
+                <h1><span>Player</span></h1>
+                <div class="dice" id="dice">
+                    <img src="images/dice-1.png" id="dice1" alt="single die">
+                    <img src="images/dice-6.png" id="dice2" alt="single die">
+                </div>
+                <div class="scores">
+                    <div class="roundTotal scoreBox">
+                        <h3>Round</h3>
+                        <p class="score" id="playerOneRound">0</p>
+                    </div>
+                    <div class="gameTotal scoreBox">
+                        <h3>Total</h3>
+                        <p class="score" id="playerOneTotal">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playerTwo" id="playerTwo">
+                <h1><span>Computer</span></h1>
+                <div class="dice" id="dice">
+                    <img src="images/dice-6.png" id="dice3" alt="single die">
+                    <img src="images/dice-1.png" id="dice4" alt="single die">
+                </div>
+                <div class="scores">
+                    <div class="roundTotal scoreBox">
+                        <h3>Round</h3>
+                        <p class="score" id="playerTwoRound">0</p>
+                    </div>
+                    <div class="gameTotal scoreBox">
+                        <h3>Total</h3>
+                        <p class="score" id="playerTwoTotal">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h1>Let's Play</h1>
+          
+                <div class="dice">
+                    <p class="Player1">Player 1</p>
+                    <img class="img1" src="images/meme.jpg">
+                </div>
+          
+                <div class="dice">
+                    <p class="Player2">Player 2</p>
+                    <img class="img2" src="images/meme.jpg">
+                </div>
+            </div>
+            
+            <div class="buttonHolder">
+                <button class="btn" id="newGame">
+                    <i class="fas fa-sync"></i>New Game
+                </button>
+                <button class="btn" id="rulesButton">
+                    <i class="fas fa-question"></i>Directions
+                </button>
+
+                <button class="btn" id="buttonRoll">
+                    <i class="fas fa-dice"></i>Roll Dice
+                </button>
+                <p>Roll Number: <span id="rollNumber">0</span></p>
+        </div>
+
+    </div>
+
+    <div class="popUp" id="popUp" hidden>
+        <div class="popUpContainer">
+            <h1 id="winner"></h1>
+            <h3>Player Score: <span id="playerScore"></span></h3>
+            <h3>Computer Score: <span id="computerScore"></span></h3>
+            <button class="btn" id="playAgain">Play Again</button>
+        </div>
+    </div>
+    <div class="rules" id="rules">
+        <div class="rulesContainer">
+            <button id="rulesClose"><i class="fab fa-mixer"></i></button>
+            <h2>Rules of Play</h2>
+            <p>Game will consist of 3 rounds of play.</p>
+            <p>Each round, the players will roll a pair of dice to establish a round score.</p>
+            <p>Player with highest score after 3 rounds is declared the winner.</p>
+            <h2>How to Score</h2>
+            <p>If a player rolls a 1 on either die, round score is 0.</p>
+            <p>If a player rolls matching die values, round score is double the total of both dice.</p>
+            <p>Any other combinations, round score is the total of both dice.</p>
+        </div>
+    </div>
+
+
+    <script src="scripts/dice.js"></script>
+</body>
+</html>

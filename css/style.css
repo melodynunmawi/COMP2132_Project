@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+  /* background: linear-gradient(225deg, #062f4f, rgba(0, 46, 99, 0.7)); */
+  background-image: linear-gradient(to bottom, rgba(220, 110, 110, 0.8), rgba(219, 163, 163, 0.4)), url(../images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Gravitas One', cursive;
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  -webkit-box-shadow: 5px 5px 5px #062f4f;
+          box-shadow: 5px 5px 5px #062f4f;
+  border-radius: 30px;
+  border: 3px solid #062f4f;
+  cursor: pointer;
+}
+
+.wrapper {
+  position: relative;
+  width: 90%;
+  margin: 5% auto;
+  height: 90%;
+}
+
+.wrapper .gameBoard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  height: 100%;
+  text-align: center;
+  background-color: #9db87a;
+  opacity: .6;
+  border-radius: 30px;
+}
+
+.wrapper .gameBoard .playerOne {
+  background: linear-gradient(to bottom, rgba(220, 110, 110, 0.8), rgba(219, 163, 163, 0.4));
+  color: #fefaf6;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.wrapper .gameBoard h1 {
+  font-size: 2.5rem;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.wrapper .gameBoard h3 {
+  font-size: 1rem;
+  padding-bottom: 20px;
+}
+
+.wrapper .gameBoard .dice img {
+  width: 75px;
+  margin-bottom: 50px;
+}
+
+.wrapper .gameBoard .scores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .gameBoard .scores .scoreBox {
+  border: 1px solid red;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  padding: 30px;
+  -webkit-box-shadow: 5px 5px 5px #062f4f;
+          box-shadow: 5px 5px 5px #062f4f;
+  border-radius: 30px;
+  border: 3px solid #062f4f;
+}
+
+.wrapper .gameBoard .scores .scoreBox .score {
+  font-size: 1.5rem;
+}
+
+.wrapper .gameBoard .buttonHolder .container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.wrapper .gameBoard .buttonHolder #newGame, .wrapper .gameBoard .buttonHolder #buttonRoll, .wrapper .gameBoard .buttonHolder #rulesButton {
+  margin-bottom: 50px;
+}
+
+.wrapper .gameBoard .buttonHolder .btn {
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  -webkit-box-shadow: 5px 5px 5px #062f4f;
+          box-shadow: 5px 5px 5px #062f4f;
+  border-radius: 30px;
+  border: 3px solid #062f4f;
+  cursor: pointer;
+}
+
+.wrapper .gameBoard .buttonHolder .btn .fas {
+  padding-right: 20px;
+  color: #b82601;
+  font-size: 1.6rem;
+}
+
+.wrapper .gameBoard .buttonHolder .btn:hover {
+  background-color: #fff;
+}
+
+.wrapper .gameBoard .buttonHolder .btn:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: 0px 0px 5px #062f4f;
+          box-shadow: 0px 0px 5px #062f4f;
+  border-radius: 30px;
+  border: 3px solid #062f4f;
+}
+
+.wrapper .gameBoard .buttonHolder p {
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: #fefaf6;
+  -webkit-box-shadow: 5px 5px 5px #062f4f;
+          box-shadow: 5px 5px 5px #062f4f;
+  border-radius: 30px;
+  border: 3px solid #062f4f;
+}
+
+#popUp {
+  text-align: center;
+  line-height: 4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(6, 47, 79, 0.6);
+}
+
+#popUp .popUpContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 50px;
+  border-radius: 30px;
+  background-color: #b82601;
+}
+
+#popUp span {
+  color: #fefaf6;
+}
+
+#rules {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(39, 133, 142, 0.98);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+  padding: 50px;
+  line-height: 2rem;
+}
+
+#rules h2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+#rules button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: transparent;
+}
+
+#rules button .fab {
+  font-size: 25px;
+}
+/*# sourceMappingURL=styles.css.map */
+/* .container {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+} */
+/* .dice {
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+} */
